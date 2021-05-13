@@ -192,7 +192,7 @@ public class DisableBatteryOptimizationPlugin implements FlutterPlugin, Activity
     private void showAutoStartEnabler(@Nullable final BatteryOptimizationUtil.OnBatteryOptimizationAccepted positiveCallback,
                                       @Nullable final BatteryOptimizationUtil.OnBatteryOptimizationCanceled negativeCallback) {
         BatteryOptimizationUtil.showBatteryOptimizationDialog(
-                mContext,
+                mActivity,
                 KillerManager.Actions.ACTION_AUTOSTART,
                 autoStartTitle,
                 autoStartMessage,
@@ -203,7 +203,7 @@ public class DisableBatteryOptimizationPlugin implements FlutterPlugin, Activity
 
     private void showManBatteryOptimizationDisabler(boolean isRequestNativeBatteryOptimizationDisabler) {
         BatteryOptimizationUtil.showBatteryOptimizationDialog(
-                mContext,
+                mActivity,
                 KillerManager.Actions.ACTION_POWERSAVING,
                 manBatteryTitle,
                 manBatteryMessage,
